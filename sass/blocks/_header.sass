@@ -1,0 +1,93 @@
+.header
+  height: 100px
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  .logo
+    background-image: url(../img/Cineplex-logo.png)
+    background-position: 50%
+    background-repeat: no-repeat
+    background-size: contain
+    display: block
+    width: 12rem
+    height: inherit
+    cursor: pointer
+
+  .navigation
+    ul
+      list-style-type: none
+      display: flex
+      justify-content: space-between
+
+      li
+        margin: 0 32px
+        color: $black
+        font-weight: 400
+        font-size: 18px
+        line-height: 22px
+        letter-spacing: -0.015em
+        &:first-child
+          margin-left: 0
+        &:last-child
+          margin-right: 0
+
+  .user
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    .log
+      display: flex
+      align-items: center
+      margin-right: 35px
+      color: $black
+      font-weight: 400
+      font-size: 18px
+      line-height: 22px
+      letter-spacing: -0.015em
+      img
+        margin-right: 20px
+
+    .language
+      ul
+        list-style-type: none
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+        position: relative
+        li
+          color: $black
+          font-weight: 400
+          font-size: 18px
+          line-height: 22px
+          letter-spacing: -0.015em
+          border-bottom: 1.5px solid $primary
+
+          display: none
+          &:hover
+            border-bottom: 2.5px solid $primary
+            font-weight: 500
+          &:first-child
+            display: revert
+            &:hover ~ #en
+              display: revert
+            &:hover ~ #ru
+              display: revert
+
+#en
+  position: absolute
+  margin-top: 1.5rem
+  background-color: white
+#ru
+  position: absolute
+  margin-top: 3rem
+  background-color: white
+
+.main
+  background-image: url(../img/main.jpeg)
+  background-position: 50%
+  background-repeat: no-repeat
+  background-size: cover
+  height: 700px

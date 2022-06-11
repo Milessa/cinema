@@ -1,0 +1,115 @@
+.movies-now
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr 1fr
+  grid-template-rows: 1fr 1fr
+  gap: 90px 26px
+  align-content: center
+  align-items: center
+  padding-bottom: 120px
+
+  .movie
+    position: relative
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr 1fr 1fr
+    gap: 0px 0px
+    align-content: center
+    align-items: center
+    max-height: 800px
+    height: 100%
+    max-width: 340px
+    width: 100%
+    border-radius: 10px
+    overflow: hidden
+    background-color: $white
+
+    img
+      height: 500px
+      width: 100%
+
+    h3
+      font-weight: 500
+      font-size: 25px
+      line-height: 30px
+      margin: 23px 0
+
+    .movie-language
+      display: flex
+      justify-content: space-between
+      align-items: center
+      border-top: 2.5px solid $grey
+      padding-top: 9px
+
+      img
+        height: 27px
+        width: auto
+        cursor: pointer
+        &:first-child
+          transform: rotate(-90deg)
+        &:last-child
+          transform: rotate(90deg)
+
+      span
+        font-weight: 500
+        font-size: 20px
+        line-height: 24px
+
+    .times-available
+      margin: 26px 0 34px
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-template-rows: 1fr 1fr
+      gap: 20px 15px
+      align-content: center
+      align-items: center
+
+      .time
+        border: 2px solid $l-blue
+        border-radius: 5px
+        font-weight: 500
+        font-size: 20px
+        line-height: 24px
+        text-align: center
+        cursor: pointer
+
+        &:hover
+          background-color: $l-blue
+
+    .details
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      height: 54px
+      background-color: $primary
+      padding: 4px 14px 4px 35px
+      cursor: pointer
+
+      span
+        font-weight: 500
+        font-size: 20px
+        line-height: 24px
+        color: $white
+
+      img
+        width: 46px
+        height: auto
+        transform: rotate(90deg)
+
+.time-select
+  background-color: $l-blue
+
+.movie-wrapper
+  max-width: 292px
+  width: 100%
+  margin: 0 auto
+
+.info
+  position: absolute
+  bottom: 0
+  right: 0
+  left: 0
+
+.first-row
+  border-top: 2.5px solid $grey
+  padding-top: 26px

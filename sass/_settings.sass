@@ -1,0 +1,62 @@
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body
+  font-family: 'Montserrat', sans-serif
+  font-weight: 400
+  color: $black
+
+.container
+  max-width: 1440px
+  margin: auto
+
+.mobile
+  display: none
+  @media (max-width: $s)
+    display: revert
+
+.desktop
+  display: revert
+  @media (max-width: $s)
+    display: none
+
+img
+  max-width: 100%
+
+a
+  text-decoration: none
+  color: inherit
+
+//scrollbar  
+::-webkit-scrollbar-track
+
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.0)
+  background-color: transparent
+  // border-radius: 10px
+
+::-webkit-scrollbar
+
+  width: 0px
+  background-color: transparent
+
+::-webkit-scrollbar-thumb
+
+  // border-radius: 10px
+  background-color: #FFF
+  background-image: -webkit-gradient(linear, 40% 0%, 75% 84%, from(#ffffff00), to($primary), color-stop(.6,$primary))
+
+// Section color
+section:nth-of-type(2)
+  background-color: $l-blue
+
+section:nth-of-type(3)
+  padding: 60px 0 100px
+  background-color: $black
+
+section:nth-of-type(4)
+  background-color: $black
+
+section:nth-of-type(5)
+  background-color: $l-blue
