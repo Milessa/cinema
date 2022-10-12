@@ -27,15 +27,35 @@
         font-size: 18px
         line-height: 22px
         letter-spacing: -0.015em
+        position: relative
         &:first-child
           margin-left: 0
         &:last-child
           margin-right: 0
 
+      li::before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 2px
+        border-radius: 4px
+        // background-color: #18272F
+        background-color: $primary
+        bottom: 0
+        left: 0
+        transform-origin: right
+        transform: scaleX(0)
+        transition: transform .3s ease-in-out
+
+      li:hover::before
+        transform-origin: left
+        transform: scaleX(1)
+
   .user
     display: flex
     justify-content: space-between
     align-items: center
+    cursor: pointer
 
     .log
       display: flex
@@ -50,40 +70,19 @@
         margin-right: 20px
 
     .language
-      ul
-        list-style-type: none
-        display: flex
-        flex-direction: column
-        justify-content: space-between
+      select
+        border: none
+        cursor: pointer
+        &:focus-visible
+          outline: none
 
-        position: relative
-        li
+        option
           color: $black
           font-weight: 400
           font-size: 18px
           line-height: 22px
           letter-spacing: -0.015em
           border-bottom: 1.5px solid $primary
-
-          display: none
-          &:hover
-            border-bottom: 2.5px solid $primary
-            font-weight: 500
-          &:first-child
-            display: revert
-            &:hover ~ #en
-              display: revert
-            &:hover ~ #ru
-              display: revert
-
-#en
-  position: absolute
-  margin-top: 1.5rem
-  background-color: white
-#ru
-  position: absolute
-  margin-top: 3rem
-  background-color: white
 
 .main
   background-image: url(../img/main.jpeg)
